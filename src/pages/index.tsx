@@ -15,7 +15,7 @@ export default function Home() {
         <NavBar />
         <div>
           <video muted loop autoPlay className={styles.video}>
-            <source src="/videos/color_grading.mov" type="video/mp4" />
+            <source src="/videos/color_grading.mp4" type="video/mp4" />
           </video>
           <div className={styles.downArrow}> 
             <svg
