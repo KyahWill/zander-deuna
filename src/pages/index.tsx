@@ -37,7 +37,10 @@ export default function Home() {
         </div>
         <div className={styles.intro}>
         </div>
-        <div className={styles.intro}>
+        <div className={styles.secondPane}>
+          <h2 className={styles.title}>
+            His experience in vairous freelance work has provided Zander deuna the skills to adapt to any multip-media task without having issues whatsoever. 
+          </h2>
           I will have to add in additional Descriptions here for next projects siguro I dunno
         </div>
 

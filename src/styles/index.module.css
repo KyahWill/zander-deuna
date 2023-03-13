@@ -5,12 +5,31 @@
     
 }
 .firstPane {
-    position:absolute;
+    position:fixed;
     z-index:0;
+}
+.secondPane {
+    height:100vh;
+    width:100vw;
+    position:relative;
+    z-index:1;
+    background:black;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+}
+.title {
+    font-size:28px;
+    color:white;
+    width:90vw;
+    margin-left:auto;
+    margin-right:auto;
 }
 .intro {
     height:100vh;
-    z-index:1
+    position:relative;
+    z-index:1;
 }
 .downArrow {
     animation: arrowUpDown 4s infinite ease;
