@@ -1,8 +1,33 @@
 import Head from "next/head";
 import styles from "@/styles/index.module.css";
 import NavBar from "@/components/navbar";
-
+import LatestProject from "@/components/latestProject";
+import { useEffect } from "react";
 export default function Home() {
+  const latestProjects = [
+    {
+      title:"test 1",
+      image:"",
+      video:"",
+    },
+    {
+      title:"test 2",
+      image:"",
+      video:"",
+    }
+  ]
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY; // => scroll position
+    // console.log(scrollPosition);
+  }
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+    }, []);
   return (
     <>
       <Head>
@@ -43,7 +68,15 @@ export default function Home() {
           </h2>
           I will have to add in additional Descriptions here for next projects siguro I dunno
         </div>
+        {latestProjects.map((project, index)=> {
+          return <>
+            <LatestProject project={project} index={index} />
+          </>
 
+        })}
+        <div className={styles.secondPane}>
+          <h2>TEST</h2> cla
+        </div>
       </main>
     </>
   );
