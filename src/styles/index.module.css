@@ -4,9 +4,13 @@
     width:100vw;
     
 }
-
+.firstPane {
+    position:absolute;
+    z-index:0;
+}
 .intro {
     height:100vh;
+    z-index:1
 }
 .downArrow {
     animation: arrowUpDown 4s infinite ease;
@@ -18,7 +22,7 @@
     align-self: center;
     
   }
-  @keyframes arrowUpDown {
+  @keyframes arrowUpDowp {
       0% {
           transform: translateY(0);
         }

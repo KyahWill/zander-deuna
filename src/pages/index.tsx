@@ -13,9 +13,9 @@ export default function Home() {
       </Head>
       <main>
         <NavBar />
-        <div>
+        <div className={styles.firstPane}>
           <video muted loop autoPlay className={styles.video}>
-            <source src="/videos/color_grading.mp4" type="video/mp4" />
+            <source src="/videos/sample_3.mp4" type="video/mp4" />
           </video>
           <div className={styles.downArrow}> 
             <svg
@@ -34,6 +34,8 @@ export default function Home() {
               />{" "}
             </svg>
           </div>
+        </div>
+        <div className={styles.intro}>
         </div>
         <div className={styles.intro}>
           I will have to add in additional Descriptions here for next projects siguro I dunno
