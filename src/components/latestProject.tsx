@@ -28,6 +28,7 @@ export default function LatestProject({ project , index}: any) {
     if (mid <= viewport && mid >= 0) {
       const newAngle = ((mid *180) / viewport) -90;
       setAngle(newAngle);
+      console.log(newAngle)
     }
 
   };

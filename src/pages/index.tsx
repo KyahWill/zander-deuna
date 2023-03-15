@@ -21,7 +21,7 @@ export default function Home() {
       video:"",
     }
   ]
-
+  console.log("test")
   return (
     <>
       <Head>
@@ -62,12 +62,16 @@ export default function Home() {
           </h2>
           I will have to add in additional Descriptions here for next projects siguro I dunno
         </div>
-        {latestProjects.map((project, index)=> {
-          return <>
-            <LatestProject project={project} index={index} key={index} />
-          </>
+        <div className={styles.thirdPane}>
+          <h2 className={styles.title}>PROJECTS</h2> 
 
-        })}
+          {latestProjects.map((project, index)=> {
+            return <>
+              <LatestProject project={project} index={index} key={index} />
+            </>
+
+          })}
+        </div>
         <div className={styles.secondPane}>
           <h2 className={styles.title}>TEST</h2> cla
         </div>
