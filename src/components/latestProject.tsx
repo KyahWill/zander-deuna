@@ -8,6 +8,18 @@ export default function LatestProject({ project , index}: any) {
   const [angle, setAngle] = useState<number | undefined>(0);
    useEffect(() => {
     setviewport(window.innerHeight);
+    const top = boxRef.current?.getBoundingClientRect().top;
+    const bottom = boxRef.current?.getBoundingClientRect().bottom;
+    const mid = (top! + bottom!) / 2
+    //   setX(x);
+    if (mid === undefined) {
+      return;
+    }
+      const newAngle = ((mid *180) / viewport) -90;
+      setAngle(newAngle);
+    
+    console.log(index,mid, angle)
+
   }, []);
   // Re-calculate X and Y of the red box when the window gets resized by the user
   useEffect(() => {
@@ -19,10 +31,8 @@ export default function LatestProject({ project , index}: any) {
       if (mid === undefined) {
         return;
       }
-      if( mid >=0 && mid <= viewport){
         const newAngle = ((mid *180) / viewport) -90;
         setAngle(newAngle);
-      }
       console.log(index,mid, angle)
     })
   }, [viewport]);
