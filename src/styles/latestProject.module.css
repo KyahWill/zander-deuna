@@ -9,7 +9,8 @@
     background:white;
     height:60vh;
     width: 90vw;
-    transform:rotate3d(0,1,0,95deg);
+    transform-style:preserve-3d;
+
 }
 .intro {
     height:100vh;
@@ -20,7 +21,6 @@
 .slide {
     background:black;
     color:white;
-    height:100vh;
     position:relative;
     z-index:1;
     margin:0;

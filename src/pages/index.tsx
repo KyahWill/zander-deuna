@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/index.module.css";
 import NavBar from "@/components/navbar";
 import LatestProject from "@/components/latestProject";
-import { useEffect } from "react";
+
 export default function Home() {
   const latestProjects = [
     {
@@ -14,20 +14,14 @@ export default function Home() {
       title:"test 2",
       image:"",
       video:"",
+    },
+    {
+      title:"test 3",
+      image:"",
+      video:"",
     }
   ]
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY; // => scroll position
-    // console.log(scrollPosition);
-  }
-  useEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-    }, []);
   return (
     <>
       <Head>
@@ -70,12 +64,12 @@ export default function Home() {
         </div>
         {latestProjects.map((project, index)=> {
           return <>
-            <LatestProject project={project} index={index} />
+            <LatestProject project={project} index={index} key={index} />
           </>
 
         })}
         <div className={styles.secondPane}>
-          <h2>TEST</h2> cla
+          <h2 className={styles.title}>TEST</h2> cla
         </div>
       </main>
     </>
