@@ -64,6 +64,7 @@ export default function Home() {
         </div>
         <div className={styles.thirdPane}>
           <h2 className={styles.title}>PROJECTS</h2> 
+          <h2 className={styles.title}>TEST</h2> cla
 
           {latestProjects.map((project, index)=> {
             return <>
@@ -72,7 +73,7 @@ export default function Home() {
 
           })}
         </div>
-        <div className={styles.secondPane}>
+        <div className={styles.fourthPane}>
           <h2 className={styles.title}>TEST</h2> cla
         </div>
       </main>
